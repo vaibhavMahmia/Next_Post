@@ -1,9 +1,10 @@
 import logo from '@/assets/logo.png';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const Header = async () => <header id="main-header">
   <Link href="/">
-    <img src={logo.src} alt="Mobile phone with posts feed on it" />
+    <Image width={100} height={100} priority src={logo} alt="Mobile phone with posts feed on it" /> {/* priority means no lazy loading because its on header and always be loaded priority will set high*/}
   </Link>
   <nav>
     <ul>
