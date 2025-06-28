@@ -3,6 +3,8 @@ import { Suspense } from 'react';
 import { Posts } from '@/components/posts';
 import { getPosts } from '@/lib/posts';
 
+
+
 const LatestPosts = async () => {
   const latestPosts = await getPosts(2);
   return <Posts posts={latestPosts} />;
